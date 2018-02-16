@@ -1,5 +1,6 @@
 package org.wecancodeit.reviews;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,9 +10,15 @@ public class ReviewRepository {
 	
 	public ReviewRepository() {
 		Review pinkfloyd = new Review(12, "Pink Floyd Vinyl", "", "Music","Vinyl");
+		Review lumineers = new Review(123, "Lumineers Vinyl","","Music","Vinyl");
+		Review glassanimals = new Review(122, "Glass Animals Vinyl","","Music","Vinyl");
+		
 		
 		
 		reviews.put(pinkfloyd.getId(), pinkfloyd);
+		reviews.put(lumineers.getId(),lumineers);
+		reviews.put(glassanimals.getId(), glassanimals);
+		
 		
 	}
 	
@@ -30,6 +37,10 @@ public class ReviewRepository {
 	public Review findReview(Long reviewId) {
 		
 		return reviews.get(reviewId);
+	}
+
+	public Collection<Review> findAll() {
+		return reviews.values();
 	}
 
 }
