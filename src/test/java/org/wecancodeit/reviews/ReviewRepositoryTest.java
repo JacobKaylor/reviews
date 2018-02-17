@@ -23,7 +23,7 @@ public class ReviewRepositoryTest {
 	private long thirdReviewId = 235;
 	private Review thirdReview = new Review(thirdReviewId, "Glass Animals Vinyl", "", "Music",
 			"Glass Animals How To Be A Human Being Vinyl Record");
-	
+
 	@Test
 	public void shouldFindFirstReview() {
 		underTest = new ReviewRepository(firstReview);
@@ -37,7 +37,7 @@ public class ReviewRepositoryTest {
 		Review result = underTest.findReview(secondReviewId);
 		assertThat(result, is(secondReview));
 	}
-	
+
 	@Test
 	public void shouldFindAllReviews() {
 		underTest = new ReviewRepository(firstReview, secondReview, thirdReview);

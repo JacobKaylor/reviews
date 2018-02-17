@@ -9,23 +9,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ReviewController {
-	
+
 	@Resource
 	ReviewRepository reviewRepo;
-	
+
 	@RequestMapping(value = "reviews")
-		public String getAllReviews(Model model) {
-			model.addAttribute("reviews", reviewRepo.findAll());
-			return "reviews";
-		}
-	
+	public String getAllReviews(Model model) {
+		model.addAttribute("reviews", reviewRepo.findAll());
+		return "reviews";
+	}
+
 	@RequestMapping("review")
 	public String getAReview(@RequestParam Long id, Model model) {
-		model.addAttribute("courses", reviewRepo.findReview(id));
+		model.addAttribute("reviews", reviewRepo.findReview(id));
 		return "review";
 	}
-	}
-	
-
-
-
+}
