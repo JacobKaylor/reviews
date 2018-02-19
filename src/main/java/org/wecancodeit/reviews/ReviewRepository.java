@@ -15,7 +15,7 @@ public class ReviewRepository {
 		Review pinkfloyd = new Review(121, "Pink Floyd Vinyl", "/images/The Wall.jpg", "Music",
 				"Man, what an adventure.");
 		Review lumineers = new Review(123, "Lumineers Vinyl", "/images/Cleopatra.jpg", "Music",
-				"This is some music that will want to make you get up and follow your dreams");
+				"This is some music that will want to make you follow your dreams");
 		Review glassanimals = new Review(122, "Glass Animals Vinyl", "/images/How to be a human being.jpg", "Music",
 				"The album speaks to me");
 
